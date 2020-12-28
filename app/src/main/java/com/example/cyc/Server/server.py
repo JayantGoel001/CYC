@@ -9,7 +9,6 @@ s = socket(AF_INET,SOCK_STREAM)
 s.bind((host,port))
 s.listen(5)
 
-
 while True:
     c,addr = s.accept()
     type = c.recv(1024).decode('utf-8')
