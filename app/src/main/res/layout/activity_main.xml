@@ -29,7 +29,7 @@
 
         <ImageButton
             android:background="@color/white"
-            android:id="@+id/play"
+            android:id="@+id/music"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:src="@drawable/music"
