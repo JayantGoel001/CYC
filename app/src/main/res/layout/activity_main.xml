@@ -27,33 +27,36 @@
         android:weightSum="3"
         android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/play"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:src="@drawable/music"
-        android:layout_width="100dp"
-        android:scaleType="fitCenter"
-        android:layout_height="100sp"
-        tools:ignore="ContentDescription" />
-    <ImageButton
-        android:id="@+id/restart"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:src="@drawable/restart"
-        android:layout_width="100sp"
-        android:scaleType="fitCenter"
-        android:layout_height="100sp"
-        tools:ignore="ContentDescription" />
-    <ImageButton
-        android:id="@+id/shutdown"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:src="@drawable/shutdown"
-        android:layout_width="100sp"
-        android:scaleType="fitCenter"
-        android:layout_height="100sp"
-        tools:ignore="ContentDescription" />
+        <ImageButton
+            android:background="@color/white"
+            android:id="@+id/play"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/music"
+            android:layout_width="100dp"
+            android:scaleType="fitCenter"
+            android:layout_height="100sp"
+            tools:ignore="ContentDescription" />
+        <ImageButton
+            android:background="@color/white"
+            android:id="@+id/restart"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/restart"
+            android:layout_width="100sp"
+            android:scaleType="fitCenter"
+            android:layout_height="100sp"
+            tools:ignore="ContentDescription" />
+        <ImageButton
+            android:background="@color/white"
+            android:id="@+id/shutdown"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/shutdown"
+            android:layout_width="100sp"
+            android:scaleType="fitCenter"
+            android:layout_height="100sp"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
