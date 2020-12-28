@@ -1,22 +1,27 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.cyc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    private val shutdown: ImageButton = findViewById(R.id.shutdown)
-    private val music: ImageButton = findViewById(R.id.music)
-    private val restart: ImageButton = findViewById(R.id.restart)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val shutdown: ImageButton = findViewById(R.id.shutdown)
+        val music: ImageButton = findViewById(R.id.music)
+        val restart: ImageButton = findViewById(R.id.restart)
+
         shutdown.setOnClickListener {
             val client = Client("shutdown")
+            client.execute()
         }
         shutdown.setOnLongClickListener {
             createToast("shutdown")
@@ -25,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         music.setOnClickListener {
             val client = Client("music")
+            client.execute()
         }
         music.setOnLongClickListener {
             createToast("play music")
@@ -33,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         restart.setOnClickListener {
             val client = Client("restart")
+            client.execute()
         }
         restart.setOnLongClickListener {
             createToast("restart")
