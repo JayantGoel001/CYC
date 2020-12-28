@@ -4,16 +4,14 @@ package com.example.cyc
 
 import android.os.AsyncTask
 import android.util.Log
-import android.widget.Toast
 import java.io.DataOutputStream
 import java.io.IOException
 import java.net.Socket
 
-class Client(var type:String="") : AsyncTask<Void, Void, Void>() {
+class Client(private var type:String="") : AsyncTask<Void, Void, Void>() {
     private var IP_Address = "192.168.43.117"
     override fun doInBackground(vararg p0: Void?): Void? {
         if (type!=""){
-            Log.i("TAGS",type)
             try {
                 val cli = Socket(IP_Address, 9999)
                 val toServer = cli.getOutputStream()
